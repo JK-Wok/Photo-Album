@@ -1,10 +1,12 @@
 ---Overview---
 This project is a photo album app. The user logs in as registered user, which must be created by the Admin user. From there, a user can create albums, add photos to these albums, tag photos, and move photos between albums.
+Albums and photos are saved between sessions, but the user must log out for the changes to be saved.
+User data is stored by serializing each user to a separate file.
 The app also has the capability to search a user album library based on the the tags or dates of photos. The user can then created a new album out of the search results.
 
 ---Instructions---
-To run this program, navigate to the directory /bin/ and execute command: "java cs213/photoAlbum/simpleview/GuiView"
-Alternatively, this app can be run with a command line interface using: "java cs213/photoAlbum/simpleview/CmdView"
+To run this program, navigate to the directory /bin/ and execute command: "java -cp . cs213/photoAlbum/simpleview/GuiView"
+Alternatively, this app can be run with a command line interface using: "java -cp . cs213/photoAlbum/simpleview/CmdView"
 Command line arguments for CmdView:
 	listusers
 	adduser <userID>
@@ -35,6 +37,7 @@ This screen also allows you to run your queries on the photo album.
 
 ---Album view---
 Add photos here. You can also recaption and modify the tags of photos here.
+Give the file address of the photo relative to your current directory (/bin/).
 Note at that adding the same photo to different albums keeps the photo linked in both albums. Changing the tags in one album affect the photo in the other albums.
 You can open the photos to a separate window from this screen and then navigate through this album with the left and right arrow keys.
 
